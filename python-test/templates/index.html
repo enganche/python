@@ -1,0 +1,27 @@
+<head>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            {% for item in seq %}
+                <li><a>{{ item }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <p>Welcome {{ username }}</p>
+    <h1>Your passowrd is: {{ password }}</h1>
+
+    <h1>Real or fake?</h1>
+
+    <div>
+        <button>Real</button>
+        <button>Fake</button>
+    </div>
+
+    <img src="https://ih0.redbubble.net/image.5225084192.5486/raf,360x360,075,t,fafafa:ca443f4786.jpg" alt="xi trum">
+
+
+</body>

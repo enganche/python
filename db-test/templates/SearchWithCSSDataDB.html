@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Search Example with Flask</h1>
+    <form action="/searchData" method="post">
+        <input type="text" name="searchInput" placeholder="Enter your search term">
+        <button type="submit"></button>
+    </form>
+    <p>
+        {% if search_text %}
+        You searched for: {{ search_text }}
+        <div class="menu">
+            <ul>
+                {% for row in table %} 
+                    <li>
+                        {{ row[0] }} --
+                        {{ row[1] }} --
+                        {{ row[2] }} --
+                        {{ row[4] }}
+                    </li>
+                {% endfor %} 
+            </ul>
+        </div>
+        {% endif %}
+    </p>
+</body>
+</html>
